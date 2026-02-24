@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(#ffffff, #8a9ae4);
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+}
+
+/* ================= SEARCH SECTION ================= */
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.search-form span {
+  font-size: 22px;
+  color: #555;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.location-button {
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.location-button span {
+  font-size: 22px;
+  color: #444;
+}
+
+/* ================= WEATHER CARD ================= */
+.weather-section {
+  background: linear-gradient(to bottom, #ffffff, #f2f7ff);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= CURRENT WEATHER ================= */
+.current-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.current-weather .weather-icon {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.current-weather .temperature {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.current-weather .temperature span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ================= HOURLY FORECAST (HORIZONTAL) ================= */
+.hourly-forecast {
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.weather-list {
+  display: flex;
+  flex-direction: row;          /* force horizontal */
+  gap: 14px;
+  list-style: none;
+}
+
+.weather-item {
+  min-width: 70px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  flex-shrink: 0;               /* prevents shrinking */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.weather-item .time {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.weather-item .weather-icon {
+  width: 30px;
+  margin-bottom: 6px;
+}
+
+.weather-item .temperature {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ================= SMOOTH SCROLL (OPTIONAL) ================= */
+.hourly-forecast::-webkit-scrollbar {
+  height: 6px;
+}
+
+.hourly-forecast::-webkit-scrollbar-thumb {
+  background: #cfd8ff;
+  border-radius: 10px;
+}
